@@ -1,0 +1,18 @@
+10. Data Integrity & Transactions
+Explain why and how you would use transactions in PHP and MySQL when handling an e-commerce order process that involves multiple 
+related database inserts (e.g., order, order_items, payments).
+
+===========================Answer===============================
+
+Transactions help keep data safe and clean, here are some following way how it does:
+1. Making sure all related actions either pass together or fail together.  
+2. Avoiding situations where some data gets saved and some doesn’t if something goes wrong.  
+3. Managing tricky stuff like placing an order, adding items to that order, and handling payments smoothly 
+   without messing things up.
+
+Suppose we want to place an order, and it will be successful if and only if the following steps are completed:
+1. Order details are saved.
+2. Each item is added to the order.
+3. Payment is processed.
+
+If any step fails like payment fails, all changes are rolled back, ensuring no incomplete data is saved.

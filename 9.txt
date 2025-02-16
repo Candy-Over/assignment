@@ -1,0 +1,12 @@
+Indexing & Query Optimization
+You have a table with millions of records, and the following query is running very slowly:
+```sql
+SELECT * FROM orders WHERE status = 'pending' ORDER BY created_at DESC LIMIT 50;
+```
+
+===========================Answer===============================
+
+To solve this problem we will crete index with attributes status and created_at
+code:
+
+CREATE INDEX status_created_at ON orders (status, created_at DESC);

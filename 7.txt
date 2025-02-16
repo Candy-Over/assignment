@@ -1,0 +1,10 @@
+Session Management & Performance
+How would you manage PHP sessions for a high-traffic website with multiple web servers?
+
+===========================Answer===============================
+
+To handle session management in a high-traffic website with multiple web servers, using Redis is an efficient
+solution due to its speed and in-memory storage. Although I haven't had the chance to use Redis yet, I am aware that it can store
+sessions centrally, ensuring all servers share the same session data.
+Another approach is storing sessions in a database, similar to how Laravel manages sessions, ensuring data persistence across
+multiple servers.
